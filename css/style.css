@@ -60,13 +60,13 @@ color: black;}
   background-size: cover;
 }
 .game {
-  width: 680px;
-  height: 266.7px;
+  width: 620px;
+  height: 310.7px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   position: relative;
-  top: 330px;
+  top: 300px;
 }
 .hole {
   flex: 2 0 20%;
