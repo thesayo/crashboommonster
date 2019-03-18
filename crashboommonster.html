@@ -31,69 +31,37 @@
     <div class="hole hole6">
       <div class="mole2"></div>
     </div>
-
     <div class="hole hole7">
       <div class="mole"></div>
     </div>
     <div class="hole hole8">
+      <div class="mole2"></div>
+    </div>
+    <div class="hole hole9">
       <div class="mole"></div>
     </div>
+    <div class="hole hole10">
+      <div class="mole2"></div>
+    </div>
+      <div class="hole hole11">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole12">
+        <div class="mole2"></div>
+      </div>
+      <div class="hole hole13">
+        <div class="mole"></div>
+      </div>
+      <div class="hole hole14">
+        <div class="mole2"></div>
+    </div>
+    <div class="hole hole15">
+      <div class="mole"></div>
   </div>
   </div>
+  </div>
 
-<script>
-  const holes = document.querySelectorAll('.hole');
-  const scoreBoard = document.querySelector('.score');
-  const moles = document.querySelectorAll('.mole');
-  const moles2 = document.querySelectorAll('.mole2');
-
-  let lastHole;
-  let timeUp = false;
-  let score = 0;
-
-
-
-  function randomTime(min, max) {
-    return Math.round(Math.random() * (max - min) + min);
-  }
-
-  function randomHole(holes) {
-    const idx = Math.floor(Math.random() * holes.length);
-    const hole = holes[idx];
-    if (hole === lastHole) {
-      return randomHole(holes);
-    }
-    lastHole = hole;
-    return hole;
-  }
-
-  function monster() {
-    const time = randomTime(200, 1000);
-    const hole = randomHole(holes);
-    hole.classList.add('up');
-    setTimeout(() => {
-        hole.classList.remove('up');
-        if (!timeUp) monster();
-    }, time);
-  }
-
-  function startGame() {
-    scoreBoard.textContent = 0;
-    timeUp = false;
-    score = 0;
-    monster();
-    setTimeout(() => timeUp = true, 10000)
-  }
-
-  function lollipop(e) {
-    if(!e.isTrusted) return; // cheater
-    score++;
-    this.classList.remove('up');
-    scoreBoard.textContent = score;
-  }
-
-  moles.forEach(mole => mole.addEventListener('click', lollipop));
-  moles2.forEach(mole => mole.addEventListener('click', lollipop));
+<script type="text/javascript" src="js/script.js"></script>
 
 </script>
 </body>

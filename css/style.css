@@ -12,6 +12,7 @@ body {
   margin: 0 auto;
   font-family: 'Amatic SC', cursive;
   background-size: cover;
+  /* -webkit-transform: rotate(-90deg); */
 }
 
 h1 {
@@ -31,17 +32,19 @@ h1 {
 
 
 .scoreboard {
-  background: url('../images/background-score.svg');
+  background: url('../images/background-score.png');
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   top: 40px;
-  width: 200px;
-  left: 850px;
+  left: 400px;
+  width: 320px;
+  margin: 0 auto;
   font-family: 'Obelix';
   text-align: left;
   padding: 20px;
   color: #47C3EA;
+  font-size: 14px;
 }
 
 .score {
@@ -50,23 +53,23 @@ color: black;}
 
 .overgame {
   background: url('../images/background-05.jpg');
-  width: 1000px;
-  height: 562px;
+  width: 1200px;
+  height: 680px;
   margin: 0 auto;
   position: relative;
   background-size: cover;
 }
 .game {
-  width: 600px;
+  width: 680px;
   height: 266.7px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   position: relative;
-  top: 220px;
+  top: 330px;
 }
 .hole {
-  flex: 2 0 25%;
+  flex: 2 0 20%;
   overflow: hidden;
   position: relative;
 }
