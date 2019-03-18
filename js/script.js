@@ -1,3 +1,6 @@
+
+
+
 const holes = document.querySelectorAll('.hole');
 const scoreBoard = document.querySelector('.score');
 const moles = document.querySelectorAll('.mole');
@@ -24,7 +27,7 @@ function randomHole(holes) {
 }
 
 function monster() {
-  const time = randomTime(200, 1000);
+  const time = randomTime(300, 1000);
   const hole = randomHole(holes);
   hole.classList.add('up');
   setTimeout(() => {

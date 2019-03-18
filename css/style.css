@@ -3,6 +3,7 @@ html {
   font-size: 10px;
 }
 
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -88,6 +89,7 @@ color: black;}
 
 .mole {
   background: url('../images/mole.svg') bottom center no-repeat;
+  background-color: transparent;
   background-size: 60%;
   position: absolute;
   top: 100%;
