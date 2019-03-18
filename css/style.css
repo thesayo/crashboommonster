@@ -1,0 +1,112 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  font-family: 'Amatic SC', cursive;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-size: 10rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+
+@font-face {
+    font-family: 'Obelix';
+    src: url('../fonts/ObelixProB-cyr.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.scoreboard {
+  background: url('../images/background-score.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 40px;
+  width: 200px;
+  left: 850px;
+  font-family: 'Obelix';
+  text-align: left;
+  padding: 20px;
+  color: #47C3EA;
+}
+
+.score {
+color: black;}
+
+
+.overgame {
+  background: url('../images/background-05.jpg');
+  width: 1000px;
+  height: 562px;
+  margin: 0 auto;
+  position: relative;
+  background-size: cover;
+}
+.game {
+  width: 600px;
+  height: 266.7px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  position: relative;
+  top: 220px;
+}
+.hole {
+  flex: 2 0 25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url('../images/dirt.svg') bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('../images/mole.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.mole2 {
+  background: url('../images/mole2.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 0;
+}
+
+.hole.up .mole2 {
+  top: 0;
+}
