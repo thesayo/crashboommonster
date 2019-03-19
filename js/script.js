@@ -36,12 +36,44 @@ function monster() {
   }, time);
 }
 
+/* var timeLeft = 10;
+var elem = document.getElementById('time');
+var timerId = setInterval(countdown, 1000);
+
+
+function countdown() {
+    if (timeLeft == -1) {
+        clearTimeout(timerId);
+    } else {
+        elem.innerHTML = timeLeft;
+        timeLeft--;
+    }
+} */
+
+
+
 function startGame() {
   scoreBoard.textContent = 0;
   timeUp = false;
   score = 0;
   monster();
-  setTimeout(() => timeUp = true, 10000)
+  setTimeout(() => timeUp = true, 10000);
+  startTimer();
+}
+
+
+function startTimer(){
+  var countdown = 10;
+  setInterval(function() {
+    countdown--;
+    if (countdown >= 0) {
+      span = document.getElementById("time");
+      span.innerHTML = countdown;
+    }
+    if (countdown === 0) {
+        clearInterval(countdown);
+    }
+  }, 1000);
 }
 
 function lollipop(e) {
@@ -49,7 +81,10 @@ function lollipop(e) {
   score++;
   this.classList.remove('up');
   scoreBoard.textContent = score;
+  e.preventDefault();
+
 }
 
+
 moles.forEach(mole => mole.addEventListener('click', lollipop));
-moles2.forEach(mole => mole.addEventListener('click', lollipop));
+moles2.forEach(mole => mole.addEventListener('touchstart', lollipop));

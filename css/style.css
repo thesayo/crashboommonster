@@ -38,7 +38,7 @@ h1 {
   background-repeat: no-repeat;
   position: relative;
   top: 40px;
-  left: 400px;
+  left: 900px;
   width: 320px;
   margin: 0 auto;
   font-family: 'Obelix';
@@ -46,9 +46,30 @@ h1 {
   padding: 20px;
   color: #47C3EA;
   font-size: 14px;
+  float: left;
 }
 
 .score {
+color: black;}
+
+.timer {
+  background: url('../images/background-time-01.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 40px;
+  left: 730px;
+  width: 320px;
+  margin: 0 auto;
+  font-family: 'Obelix';
+  text-align: left;
+  padding: 20px;
+  color: #9B5C08;
+  font-size: 14px;
+  float: left;
+}
+
+#time {
 color: black;}
 
 
